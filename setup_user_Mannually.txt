@@ -1,0 +1,24 @@
+GADHI SREENIVASA REDDY :
+
+Create User and assign password and homedirectory
+add user to sudo and root groups
+edit sshd_config permissions
+
+
+
+sudo su -
+sudo adduser srinu
+sudo usermod -aG sudo srinu
+sudo usermod -aG root srinu
+cd /etc
+nano sudoers
+srinu ALL=(ALL:ALL) ALL
+cd /etc
+cd ssh
+nano sshd_config
+
+Edit :
+PasswordAuthentication yes
+PermitEmptyPasswords no
+
+service ssh restart
